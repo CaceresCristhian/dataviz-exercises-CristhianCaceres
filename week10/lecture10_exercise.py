@@ -58,7 +58,8 @@ st.markdown("""
 # ── Data Loading ─────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    path = Path(__file__).parent.parent / 'data' / 'co2_emissions.csv'
+    current_dir = Path(__file__).parent
+    path = current_dir / "data" / "co2_emissions.csv"
     df = pd.read_csv(path)
     df['Date'] = pd.to_datetime(df['Year'].astype(str) + '-01-01')
     return df
