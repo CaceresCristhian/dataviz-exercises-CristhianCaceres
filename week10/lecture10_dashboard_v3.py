@@ -20,7 +20,7 @@ from pathlib import Path
 
 def load_data():
     current_dir = Path(__file__).parent
-    path = current_dir / "data" / "your_actual_file_name.csv"
+    path = current_dir / "data" / "co2_emissions.csv"
     df = pd.read_csv(path)
     df['Date'] = pd.to_datetime(df['Year'].astype(str) + '-01-01')
     return df
