@@ -18,11 +18,6 @@ from pathlib import Path
 
 @st.cache_data
 
-import pandas as pd
-import streamlit as st
-from pathlib import Path
-
-
 def load_data():
     current_dir = Path(__file__).parent
     path = current_dir / "data" / "your_actual_file_name.csv"
